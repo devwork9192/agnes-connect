@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AGNES — Missed Call Recovery",
-  description: "AI-powered missed call recovery for home service businesses",
+  title: "AGNES — Never Miss a Customer Call Again",
+  description: "AGNES is an AI-powered missed call recovery service for local home service businesses. Catch every lead, book more appointments.",
 };
 
 export default function RootLayout({

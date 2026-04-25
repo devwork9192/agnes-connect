@@ -6,7 +6,38 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
+      },
+      colors: {
+        primary: {
+          DEFAULT: "#4F46E5",
+          50: "#EEF2FF",
+          100: "#E0E7FF",
+          200: "#C7D2FE",
+          300: "#A5B4FC",
+          400: "#818CF8",
+          500: "#6366F1",
+          600: "#4F46E5",
+          700: "#4338CA",
+          800: "#3730A3",
+          900: "#312E81",
+        },
+        accent: {
+          DEFAULT: "#FB923C",
+          50: "#FFF7ED",
+          100: "#FFEDD5",
+          400: "#FDBA74",
+          500: "#FB923C",
+          600: "#EA580C",
+        },
+        slate: {
+          850: "#141C2E",
+          950: "#0B1120",
+        },
+      },
+    },
   },
   plugins: [],
 };
