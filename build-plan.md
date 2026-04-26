@@ -62,15 +62,15 @@ Rationale: Validates integration early, forces architectural decisions visible, 
 6. API notifies owner via SMS.
 
 **Tasks:**
-- [ ] Create Supabase schema: `tenants`, `conversations`, `messages`
-- [ ] Implement RLS policies (multi-tenant isolation)
-- [ ] Create Twilio webhook handler (`POST /api/twilio/webhook`)
+- [x] Create Supabase schema: `tenants`, `conversations`, `messages`
+- [x] Implement RLS policies (multi-tenant isolation)
+- [x] Create Twilio webhook handler (`POST /api/twilio/webhook`)
   - Parse incoming webhook
   - Validate Twilio signature
   - Lookup tenant
   - Handle idempotency (avoid duplicate responses)
-- [ ] Implement outbound SMS logic (call Twilio API)
-- [ ] Write test script with sample Twilio webhook payload
+- [x] Implement outbound SMS logic (call Twilio API)
+- [x] Write test script with sample Twilio webhook payload
 - [ ] Deploy and test with Twilio sandbox
 
 **Definition of Done:**

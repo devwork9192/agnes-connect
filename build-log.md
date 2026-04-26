@@ -65,21 +65,38 @@ None.
 
 ---
 
-## Session 3
-
-**Date:** TBD
+## Session 3 — Apr 26, 2026
 
 ### Completed
-- [ ] 
+- [x] **Slice 1 — code complete (pending live test)**
+  - Supabase schema migration run: `tenants`, `conversations`, `messages`, `appointments` with RLS + indexes
+  - Server-side Supabase client (`lib/supabase-admin.ts`) — service role key, bypasses RLS
+  - Twilio SMS helper (`lib/twilio.ts`) — `sendSMS()`, `validateTwilioSignature()`
+  - Twilio webhook handler (`app/api/twilio/webhook/route.ts`)
+    - Handles incoming voice calls → returns `<Hangup/>` TwiML immediately
+    - Async processing via `after()`: tenant lookup, dedup (60s window), conversation + message creation
+    - Sends hardcoded follow-up SMS to caller
+    - Notifies owner via SMS
+    - Twilio signature validation (skipped in dev)
+    - Structured logging with request correlation IDs
+  - Test script (`scripts/test-webhook.ts`) — simulates Twilio voice webhook locally
+  - Twilio SDK installed (`twilio` v5)
+  - Build verified — `next build` passes with zero errors
 
 ### Current State
-- 
+- **Slice 1: Code complete** — needs live test with real Twilio call
+- **Still needed:** Insert a test tenant row in Supabase, deploy to Vercel, configure Twilio webhook URL
 
 ### Blockers
-- 
+None.
 
 ### Next Session Plan
-- 
+1. Insert test tenant row in Supabase
+2. Deploy to Vercel
+3. Set Vercel env vars (SUPABASE_SERVICE_ROLE_KEY, TWILIO_*)
+4. Configure Twilio voice webhook URL → Vercel endpoint
+5. Test end-to-end: call Twilio number → receive SMS
+6. Start **Slice 2**: AI-generated first reply (Azure OpenAI)
 
 ---
 
