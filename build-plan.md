@@ -30,18 +30,20 @@ Rationale: Validates integration early, forces architectural decisions visible, 
 **Goal:** Next.js + Supabase scaffolding with structured logging.
 
 **Tasks:**
-- [ ] Next.js project setup (App Router, TypeScript, ESLint)
-- [ ] Supabase project creation
-- [ ] Environment variables configured locally and on Vercel
-- [ ] Structured logging utility (request ID, timestamps, correlation IDs)
-- [ ] Basic health-check endpoint (`GET /api/health`)
-- [ ] Vercel deployment working (free tier)
+- [x] Next.js project setup (App Router, TypeScript, ESLint)
+- [x] Supabase project creation
+- [x] Environment variables configured locally and on Vercel
+- [x] Structured logging utility (request ID, timestamps, correlation IDs)
+- [x] Basic health-check endpoint (`GET /api/health`)
+- [x] Vercel deployment working (free tier)
 
 **Definition of Done:**
 - `npm run dev` runs locally without errors
 - Deployed to Vercel with preview URL
 - Request logs visible in Vercel function logs
 - Supabase introspection shows project is live
+
+**Status: Complete** — Health check verified locally and on Vercel.
 
 **Estimated Duration:** 2–4 hours
 
@@ -272,17 +274,19 @@ Rationale: Validates integration early, forces architectural decisions visible, 
 **Goal:** Professional presence; legal compliance pages.
 
 **Tasks:**
-- [ ] Single-page site: About, How It Works, Pricing, Contact
-- [ ] Privacy Policy page (required before first paying customer)
-- [ ] Terms of Service page (required before first paying customer)
-- [ ] Deploy to Vercel under same project or separate domain
+- [x] Single-page site: About, How It Works, Pricing, Contact
+- [x] Privacy Policy page (required before first paying customer)
+- [x] Terms of Service page (required before first paying customer)
+- [x] Deploy to Vercel under same project or separate domain
 - [ ] Add analytics (optional for Phase 1)
 
 **Definition of Done:**
-- Site deploys and is accessible
-- Privacy Policy published and visible
-- ToS published and visible
-- Mobile-responsive
+- Site deploys and is accessible ✅
+- Privacy Policy published and visible ✅
+- ToS published and visible ✅
+- Mobile-responsive ✅
+
+**Status: Complete** — Branded as AGNES with Indigo + Peach palette. Hero, How It Works, Features, Pricing, CTA, Footer all live. Privacy & Terms pages published.
 
 **Estimated Duration:** 3–5 hours (depends on design depth)
 

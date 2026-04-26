@@ -29,21 +29,39 @@ None yet.
 
 ---
 
-## Session 2
-
-**Date:** TBD
+## Session 2 — Apr 25–26, 2026
 
 ### Completed
-- [ ] 
+- [x] **Marketing Website — fully built and branded as AGNES**
+  - Rebranded from "PingBack by AGNES" to just "AGNES"
+  - Designed modern single-page layout: Hero, How It Works (3-step), Features (4 cards), Pricing, CTA, Footer
+  - Privacy Policy page with Header, back link, expanded content
+  - Terms of Service page with Header, back link, expanded content
+  - Sticky header with logo mark, anchor nav links (work from any page via `/#section`)
+  - Google Sign-In button wired to Supabase OAuth
+  - Final color palette: **Indigo (#4F46E5) + Peach (#FB923C)**
+  - Tested 9 color combinations before landing on final palette
+  - Mobile-responsive throughout
+- [x] **Slice 0 — mostly complete**
+  - Next.js App Router + TypeScript scaffolded
+  - Supabase client configured (`lib/supabase.ts`)
+  - Structured logger (`lib/logger.ts`)
+  - Health-check endpoint (`GET /api/health`)
+  - Deployed to Vercel, git push triggers auto-deploy
 
 ### Current State
-- 
+- **Marketing website: DONE** — ready to share the Vercel URL
+- **Slice 0: Complete** — health check verified locally and on Vercel
+- **Slices 1–7: Not started** — core backend (Twilio, AI, calendar) is next
 
 ### Blockers
-- 
+None.
 
 ### Next Session Plan
-- 
+1. Confirm Vercel env vars are live
+2. Start **Slice 1**: Supabase schema (`tenants`, `conversations`, `messages`) + RLS policies
+3. Twilio webhook handler for missed calls
+4. Send hardcoded SMS to prove plumbing works end-to-end
 
 ---
 
