@@ -5,34 +5,39 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #4F46E5;
-  --color-primary-light: #6366F1;
-  --color-accent: #FB923C;
-  --color-dark: #0B1120;
-  --color-muted: #64748B;
-  --section-light: #F8FAFC;
+  --color-accent: #F59E0B;
+  --color-dark: #0a0a0a;
+  --color-card: #111111;
+  --color-border: rgba(255, 255, 255, 0.08);
 }
 
 body {
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background-color: #ffffff;
+  background-color: var(--color-dark);
+  color: #9ca3af;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.hero-gradient {
-  background: linear-gradient(135deg, #0B1120 0%, #1E293B 50%, #312E81 100%);
+/* Subtle grid pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
-.glow {
-  box-shadow: 0 0 60px rgba(79, 70, 229, 0.15);
+/* Gradient glow for CTA card */
+.cta-gradient {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 50%, transparent 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
 .card-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(245, 158, 11, 0.3);
 }
 
