@@ -178,7 +178,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">You miss a call</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">Your phone is silenced, you&apos;re driving, or you&apos;re on another job. AGNES picks it up the moment it ends.</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Your phone is silenced, you&apos;re driving, or you&apos;re on another job. AGNES detects the missed call and texts them back instantly.</p>
               </div>
               {/* Step 2 */}
               <div className="relative rounded-2xl border border-white/10 bg-[#111] p-8">
@@ -319,10 +319,10 @@ export default function Home() {
                   <span className="inline-block rounded-full bg-accent/10 border border-accent/20 px-4 py-1 text-xs font-semibold text-accent uppercase tracking-wide">Early Access</span>
                 </div>
                 <div className="flex items-baseline justify-center gap-1 mb-1">
-                  <span className="text-5xl font-extrabold text-white">$99</span>
+                  <span className="text-5xl font-extrabold text-white">$79</span>
                   <span className="text-lg text-gray-500">CAD / mo</span>
                 </div>
-                <p className="text-sm text-gray-500 mb-8">+ $299 CAD one-time setup fee</p>
+                <p className="text-sm text-gray-500 mb-8">+ $149 CAD one-time setup fee</p>
                 <div className="inline-grid grid-cols-1 gap-3 text-sm text-gray-400 text-left mb-8">
                   {[
                     "AI-powered missed call text-back",
@@ -388,6 +388,10 @@ export default function Home() {
                   q: "How long does setup take?",
                   a: "Just one dial code on your carrier — we send you a simple 1-page guide and handle the rest. AGNES is personalized with your business name and trade type before you finish your next coffee.",
                 },
+                {
+                  q: "I already have voicemail — why do I need this?",
+                  a: "Voicemail requires the caller to leave a message and you to call back later. Most people hang up. AGNES engages them immediately via text while they're still interested — and books the job before they move on.",
+                },
               ].map(({ q, a }) => (
                 <details key={q} className="group rounded-2xl border border-white/10 bg-[#111] p-6 cursor-pointer">
                   <summary className="font-semibold text-white list-none flex justify-between items-center gap-4">
@@ -418,7 +422,7 @@ export default function Home() {
                   href="mailto:hello@agnesconnect.com?subject=AGNES%20Early%20Access"
                   className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-gray-900 hover:bg-accent-400 transition-colors"
                 >
-                  Start free trial →
+                  Request Early Access →
                 </a>
                 <a
                   href="#pricing"
