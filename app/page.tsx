@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,16 +14,16 @@ export default function Home() {
             {/* Left — copy */}
             <div className="text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
-                Every Missed Call<br />
-                <span className="text-accent">Costs You a Job.</span>
+                MISSED CALLS.<br />
+                <span className="text-accent">MEET AGNES.</span>
               </h1>
               <p className="mt-6 text-lg text-gray-400 max-w-lg leading-relaxed">
-                AGNES automatically texts back anyone who calls when you can&apos;t answer — qualifies
+                Agnes automatically texts back anyone who calls when you can&apos;t answer — qualifies
                 the lead and books the appointment. You stay on the job.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a
-                  href="mailto:hello@agnesconnect.com?subject=AGNES%20Early%20Access"
+                  href="mailto:info@agnesai.ca?subject=AGNES%20Early%20Access"
                   className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-gray-900 hover:bg-accent-400 transition-colors"
                 >
                   Request Early Access →
@@ -70,7 +71,7 @@ export default function Home() {
                   <div className="bg-red-500/20 border border-red-500/30 rounded-xl px-4 py-2.5 text-center">
                     <span className="text-red-400 text-xs font-medium">📞 Missed call · 2:34 PM</span>
                   </div>
-                  {/* AGNES reply */}
+                  {/* Agnes reply */}
                   <div className="flex justify-end">
                     <div className="bg-accent rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[85%]">
                       <p className="text-gray-900 text-[13px] leading-relaxed font-medium">Hey Sarah, sorry I missed you — I&apos;m on a job. This is Mike&apos;s AI assistant. Can I help book you in?</p>
@@ -82,7 +83,7 @@ export default function Home() {
                       <p className="text-white text-[13px]">Yes please! My boiler is leaking, need someone urgently</p>
                     </div>
                   </div>
-                  {/* AGNES offer */}
+                  {/* Agnes offer */}
                   <div className="flex justify-end">
                     <div className="bg-accent rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[85%]">
                       <p className="text-gray-900 text-[13px] leading-relaxed font-medium">On it. Mike has tomorrow 8am or today 6pm. Which works?</p>
@@ -116,16 +117,13 @@ export default function Home() {
           </div>
           {/* Trust strip */}
           <div className="w-full border-y border-white/10 bg-[#0d0d0d] py-10 text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-5">Built for the Trades</p>
-            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm font-medium text-gray-400">
-              <span>Plumbers</span>
-              <span>Electricians</span>
-              <span>HVAC</span>
-              <span>Roofers</span>
-              <span>Landscapers</span>
-              <span>Handymen</span>
-              <span>Painters</span>
-              <span>Cleaners</span>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-6">Built for the Trades</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {["Plumbers","Electricians","HVAC","Roofers","Landscapers","Handymen","Painters","Cleaners"].map((trade) => (
+                <span key={trade} className="rounded-xl border border-white/10 bg-[#111] px-5 py-2.5 text-sm font-semibold text-white">
+                  {trade}
+                </span>
+              ))}
             </div>
           </div>
         </section>
@@ -145,16 +143,16 @@ export default function Home() {
             {/* Stat cards */}
             <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-2xl border border-white/10 bg-[#111] p-8">
-                <div className="text-4xl font-extrabold text-accent">62%</div>
-                <p className="mt-2 text-sm text-gray-500">of trades calls go unanswered during the workday</p>
+                <div className="text-2xl font-extrabold text-white leading-tight">You&apos;re unavailable<br/>more than you <span className="text-accent">think.</span></div>
+                <p className="mt-3 text-sm text-gray-500">Most calls come in between 9am–5pm — exactly when you&apos;re heads-down on a job and your phone stays in your pocket.</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-[#111] p-8">
-                <div className="text-4xl font-extrabold text-accent">85%</div>
-                <p className="mt-2 text-sm text-gray-500">of customers won&apos;t leave a voicemail — they just call the next guy</p>
+                <div className="text-2xl font-extrabold text-white leading-tight"><span className="text-accent">~80%</span> of callers<br/>won&apos;t leave a voicemail.</div>
+                <p className="mt-3 text-sm text-gray-500">They hang up, open Google, and call whoever is listed next. Your voicemail is a dead end.</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-[#111] p-8">
-                <div className="text-4xl font-extrabold text-accent">$23k</div>
-                <p className="mt-2 text-sm text-gray-500">average revenue lost per tradesperson per year</p>
+                <div className="text-2xl font-extrabold text-white leading-tight">The window to<br/>respond is <span className="text-accent">5 minutes.</span></div>
+                <p className="mt-3 text-sm text-gray-500">After that, the lead has moved on. Calling back an hour later rarely works — the job is already booked.</p>
               </div>
             </div>
           </div>
@@ -178,7 +176,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">You miss a call</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">Your phone is silenced, you&apos;re driving, or you&apos;re on another job. AGNES detects the missed call and texts them back instantly.</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Your phone is silenced, you&apos;re driving, or you&apos;re on another job. Agnes detects the missed call and texts them back instantly.</p>
               </div>
               {/* Step 2 */}
               <div className="relative rounded-2xl border border-white/10 bg-[#111] p-8">
@@ -210,8 +208,7 @@ export default function Home() {
             </div>
             <div className="mt-14 text-center">
               <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl px-6 py-4">
-                <span className="text-2xl">🔧</span>
-                <p className="text-gray-300 text-sm">You stay on the job. <span className="text-white font-semibold">AGNES captures every lead.</span></p>
+                <p className="text-gray-300 text-sm">You stay on the job. <span className="text-white font-semibold">Agnes captures every lead.</span></p>
               </div>
             </div>
           </div>
@@ -220,7 +217,7 @@ export default function Home() {
         {/* ── What It Does (Features) ── */}
         <section className="w-full py-20 md:py-28 border-t border-white/5">
           <div className="max-w-5xl mx-auto px-6">
-            <div className="mb-14">
+            <div className="mb-16">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4 block">What It Does</span>
               <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                 Your sharpest tool<br />isn&apos;t in the van.
@@ -236,7 +233,25 @@ export default function Home() {
                     </svg>
                   ),
                   title: "Instant Text Follow-Up",
-                  desc: "AGNES texts back within 30 seconds of a missed call — before your customer can Google the next contractor.",
+                  desc: "Agnes texts back within 30 seconds of a missed call — before your customer can Google the next contractor.",
+                },
+                {
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                    </svg>
+                  ),
+                  title: "Works with Your Number",
+                  desc: "No porting, no new SIM. Agnes uses call forwarding on your existing business number. Customers never know the difference.",
+                },
+                {
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                    </svg>
+                  ),
+                  title: "After-Hours Coverage",
+                  desc: "Agnes runs 24/7 — evenings, weekends, holidays. Stop losing Saturday calls to competitors who answer.",
                 },
                 {
                   icon: (
@@ -246,7 +261,7 @@ export default function Home() {
                     </svg>
                   ),
                   title: "Owner Takeover",
-                  desc: "See conversations in real time. Reply from your own phone anytime — AGNES steps aside immediately and lets you handle it.",
+                  desc: "See conversations in real time. Reply from your own phone anytime — Agnes steps aside immediately and lets you handle it.",
                 },
                 {
                   icon: (
@@ -258,25 +273,7 @@ export default function Home() {
                     </svg>
                   ),
                   title: "Google Calendar Booking",
-                  desc: "AGNES checks your actual availability and confirms appointments directly in your calendar — no double-bookings, no back-and-forth.",
-                },
-                {
-                  icon: (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                    </svg>
-                  ),
-                  title: "Works with Your Number",
-                  desc: "No porting, no new SIM. AGNES uses call forwarding on your existing business number. Customers never know the difference.",
-                },
-                {
-                  icon: (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-                    </svg>
-                  ),
-                  title: "After-Hours Coverage",
-                  desc: "AGNES runs 24/7 — evenings, weekends, holidays. Stop losing Saturday calls to competitors who answer.",
+                  desc: "Agnes checks your actual availability and confirms appointments directly in your calendar — no double-bookings, no back-and-forth.",
                 },
                 {
                   icon: (
@@ -285,7 +282,7 @@ export default function Home() {
                     </svg>
                   ),
                   title: "Smart Lead Qualification",
-                  desc: "AGNES asks the right questions — job type, urgency, address — so you show up to every job prepared and ready to quote.",
+                  desc: "Agnes asks the right questions — job type, urgency, address — so you show up to every job prepared and ready to quote.",
                 },
               ].map(({ icon, title, desc }) => (
                 <div key={title} className="card-hover rounded-2xl border border-white/10 bg-[#111] p-7">
@@ -320,9 +317,9 @@ export default function Home() {
                 </div>
                 <div className="flex items-baseline justify-center gap-1 mb-1">
                   <span className="text-5xl font-extrabold text-white">$79</span>
-                  <span className="text-lg text-gray-500">CAD / mo</span>
+                  <span className="text-lg text-gray-500">/ mo</span>
                 </div>
-                <p className="text-sm text-gray-500 mb-8">+ $149 CAD one-time setup fee</p>
+                <p className="text-sm text-gray-500 mb-8">+ $149 one-time setup fee</p>
                 <div className="inline-grid grid-cols-1 gap-3 text-sm text-gray-400 text-left mb-8">
                   {[
                     "AI-powered missed call text-back",
@@ -340,7 +337,7 @@ export default function Home() {
                 </div>
                 <div>
                   <a
-                    href="mailto:hello@agnesconnect.com?subject=AGNES%20Early%20Access"
+                    href="mailto:info@agnesai.ca?subject=AGNES%20Early%20Access"
                     className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-gray-900 hover:bg-accent-400 transition-colors"
                   >
                     Request Early Access →
@@ -366,31 +363,31 @@ export default function Home() {
         {/* ── FAQ ── */}
         <section className="w-full py-20 md:py-28 border-t border-white/5">
           <div className="max-w-3xl mx-auto px-6">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4 block">FAQ</span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Common Questions</h2>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {[
                 {
+                  q: "I already have voicemail — why do I need this?",
+                  a: "Voicemail requires the caller to leave a message and you to call back later. Most people hang up. Agnes engages them immediately via text while they're still interested — and books the job before they move on.",
+                },
+                {
                   q: "Do I need to get a new phone number?",
-                  a: "No. AGNES works with your existing business number using call forwarding. When a call goes unanswered, it routes to AGNES automatically. Your customers see your same number — nothing changes for them.",
+                  a: "No. Agnes works with your existing business number using call forwarding. When a call goes unanswered, it routes to Agnes automatically. Your customers see your same number — nothing changes for them.",
                 },
                 {
                   q: "What if I want to take over the conversation?",
-                  a: "Just reply to the text thread from your own phone. AGNES detects your message and immediately steps back. No special commands needed.",
+                  a: "Just reply to the text thread from your own phone. Agnes detects your message and immediately steps back. No special commands needed.",
                 },
                 {
                   q: "Does it work after hours and on weekends?",
-                  a: "Yes — that's one of the biggest wins. AGNES runs 24/7, so Saturday afternoon calls, Sunday evening inquiries, and holiday leads are all captured and booked automatically.",
+                  a: "Yes — that's one of the biggest wins. Agnes runs 24/7, so Saturday afternoon calls, Sunday evening inquiries, and holiday leads are all captured and booked automatically.",
                 },
                 {
                   q: "How long does setup take?",
-                  a: "Just one dial code on your carrier — we send you a simple 1-page guide and handle the rest. AGNES is personalized with your business name and trade type before you finish your next coffee.",
-                },
-                {
-                  q: "I already have voicemail — why do I need this?",
-                  a: "Voicemail requires the caller to leave a message and you to call back later. Most people hang up. AGNES engages them immediately via text while they're still interested — and books the job before they move on.",
+                  a: "Just one dial code on your carrier — we send you a simple 1-page guide and handle the rest. Agnes is personalized with your business name and trade type before you finish your next coffee.",
                 },
               ].map(({ q, a }) => (
                 <details key={q} className="group rounded-2xl border border-white/10 bg-[#111] p-6 cursor-pointer">
@@ -408,7 +405,7 @@ export default function Home() {
         </section>
 
         {/* ── CTA ── */}
-        <section className="w-full py-20">
+        <section className="w-full py-20 md:py-28">
           <div className="max-w-4xl mx-auto px-6">
             <div className="cta-gradient rounded-3xl p-12 md:p-16 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
@@ -419,7 +416,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:hello@agnesconnect.com?subject=AGNES%20Early%20Access"
+                  href="mailto:info@agnesai.ca?subject=AGNES%20Early%20Access"
                   className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-gray-900 hover:bg-accent-400 transition-colors"
                 >
                   Request Early Access →
@@ -441,14 +438,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="4" width="28" height="20" rx="4" fill="#F59E0B" />
-                    <polygon points="8,24 8,29 14,24" fill="#F59E0B" />
-                    <path d="M10 12h6M10 16h10" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" />
-                    <circle cx="24" cy="10" r="5" fill="#0a0a0a" stroke="#F59E0B" strokeWidth="1.5" />
-                    <path d="M22 10l1.5 1.5L26 8.5" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span className="font-bold text-white">AGNES</span>
+                  <Image src="/agnes-logo-1.png" alt="Agnes" width={100} height={25} className="h-7 w-auto" style={{mixBlendMode:'lighten'}} />
                 </div>
                 <p className="text-sm text-gray-500">The AI receptionist built for tradespeople. Never lose a job to a missed call again.</p>
               </div>
@@ -462,14 +452,15 @@ export default function Home() {
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Get in Touch</h4>
                 <nav className="flex flex-col gap-2 text-sm">
-                  <a href="mailto:hello@agnesconnect.com" className="hover:text-white transition-colors">hello@agnesconnect.com</a>
+                  <a href="mailto:info@agnesai.ca" className="hover:text-white transition-colors">info@agnesai.ca</a>
                   <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
                   <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
                 </nav>
               </div>
             </div>
             <div className="mt-10 pt-6 border-t border-white/5 text-center text-xs text-gray-600">
-              &copy; {new Date().getFullYear()} AGNES &mdash; Built for the trades.
+              &copy; {new Date().getFullYear()} AGNES Inc. &mdash; Built for the trades.
+
             </div>
           </div>
         </footer>

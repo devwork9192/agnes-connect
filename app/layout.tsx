@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "AGNES — Never Miss a Customer Call Again",
   description: "AGNES is an AI-powered missed call recovery service for local home service businesses. Catch every lead, book more appointments.",
+  icons: {
+    icon: "/agnes-logo.png",
+    shortcut: "/agnes-logo.png",
+    apple: "/agnes-logo.png",
+  },
 };
 
 export default function RootLayout({

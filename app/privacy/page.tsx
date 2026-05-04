@@ -39,7 +39,7 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-semibold text-gray-900 mt-8 mb-3">Contact</h2>
             <p>
               For questions about this policy, email{" "}
-              <a href="mailto:hello@agnesconnect.com" className="text-primary hover:underline">hello@agnesconnect.com</a>.
+              <a href="mailto:info@agnesai.ca" className="text-primary hover:underline">info@agnesai.ca</a>.
             </p>
           </div>
         </div>
