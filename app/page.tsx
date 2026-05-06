@@ -50,7 +50,7 @@ export default function Home() {
 
             {/* Right — Phone mockup (RingBack style) */}
             <div className="flex justify-center md:justify-end">
-              <div className="w-72 rounded-[2.5rem] bg-[#1a1a1a] border border-white/10 shadow-2xl overflow-hidden">
+              <div className="w-72 rounded-[2.5rem] bg-[#1a1a1a] border border-white/10 shadow-2xl overflow-hidden phone-float">
                 {/* Status bar */}
                 <div className="flex justify-between items-center px-6 pt-4 pb-2">
                   <span className="text-white text-xs">9:41</span>
@@ -119,8 +119,8 @@ export default function Home() {
           <div className="w-full border-y border-white/10 bg-[#0d0d0d] py-10 text-center">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-6">Built for the Trades</p>
             <div className="flex flex-wrap justify-center gap-3">
-              {["Plumbers","Electricians","HVAC","Roofers","Landscapers","Handymen","Painters","Cleaners"].map((trade) => (
-                <span key={trade} className="rounded-xl border border-white/10 bg-[#111] px-5 py-2.5 text-sm font-semibold text-white">
+              {["Plumbers","Electricians","HVAC","Roofers","Landscapers","Handymen","Painters","Cleaners"].map((trade, i) => (
+                <span key={trade} className={`animate-fade-in anim-delay-${i + 1} rounded-xl border border-white/10 bg-[#111] px-5 py-2.5 text-sm font-semibold text-white`}>
                   {trade}
                 </span>
               ))}
@@ -131,7 +131,7 @@ export default function Home() {
         {/* ── The Problem ── */}
         <section className="w-full py-20 md:py-28">
           <div className="max-w-5xl mx-auto px-6">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl animate-fade-up">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4 block">The Problem</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                 Every missed call is a job<br />your competitor just won.
@@ -142,15 +142,15 @@ export default function Home() {
             </div>
             {/* Stat cards */}
             <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="rounded-2xl border border-white/10 bg-[#111] p-8">
+              <div className="rounded-2xl border border-white/10 bg-[#111] p-8 animate-fade-up">
                 <div className="text-2xl font-extrabold text-white leading-tight">You&apos;re unavailable<br/>more than you <span className="text-accent">think.</span></div>
                 <p className="mt-3 text-sm text-gray-500">Most calls come in between 9am–5pm — exactly when you&apos;re heads-down on a job and your phone stays in your pocket.</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-[#111] p-8">
+              <div className="rounded-2xl border border-white/10 bg-[#111] p-8 animate-fade-up anim-delay-1">
                 <div className="text-2xl font-extrabold text-white leading-tight"><span className="text-accent">~80%</span> of callers<br/>won&apos;t leave a voicemail.</div>
                 <p className="mt-3 text-sm text-gray-500">They hang up, open Google, and call whoever is listed next. Your voicemail is a dead end.</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-[#111] p-8">
+              <div className="rounded-2xl border border-white/10 bg-[#111] p-8 animate-fade-up anim-delay-2">
                 <div className="text-2xl font-extrabold text-white leading-tight">The window to<br/>respond is <span className="text-accent">5 minutes.</span></div>
                 <p className="mt-3 text-sm text-gray-500">After that, the lead has moved on. Calling back an hour later rarely works — the job is already booked.</p>
               </div>
@@ -161,13 +161,13 @@ export default function Home() {
         {/* ── How It Works ── */}
         <section id="how-it-works" className="w-full py-20 md:py-28 border-t border-white/5">
           <div className="max-w-5xl mx-auto px-6">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 animate-fade-up">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4 block">How It Works</span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Three steps. Zero effort.</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Step 1 */}
-              <div className="relative rounded-2xl border border-white/10 bg-[#111] p-8">
+              <div className="relative rounded-2xl border border-white/10 bg-[#111] p-8 animate-fade-up">
                 <span className="absolute top-6 right-6 text-6xl font-extrabold text-white/5">01</span>
                 <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -179,7 +179,7 @@ export default function Home() {
                 <p className="text-gray-400 text-sm leading-relaxed">Your phone is silenced, you&apos;re driving, or you&apos;re on another job. Agnes detects the missed call and texts them back instantly.</p>
               </div>
               {/* Step 2 */}
-              <div className="relative rounded-2xl border border-white/10 bg-[#111] p-8">
+              <div className="relative rounded-2xl border border-white/10 bg-[#111] p-8 animate-fade-up anim-delay-1">
                 <span className="absolute top-6 right-6 text-6xl font-extrabold text-white/5">02</span>
                 <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -191,7 +191,7 @@ export default function Home() {
                 <p className="text-gray-400 text-sm leading-relaxed">A natural, friendly SMS in your voice — within seconds. Asks what they need, where, and how urgent.</p>
               </div>
               {/* Step 3 */}
-              <div className="relative rounded-2xl border border-white/10 bg-[#111] p-8">
+              <div className="relative rounded-2xl border border-white/10 bg-[#111] p-8 animate-fade-up anim-delay-2">
                 <span className="absolute top-6 right-6 text-6xl font-extrabold text-white/5">03</span>
                 <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -217,7 +217,7 @@ export default function Home() {
         {/* ── What It Does (Features) ── */}
         <section className="w-full py-20 md:py-28 border-t border-white/5">
           <div className="max-w-5xl mx-auto px-6">
-            <div className="mb-16">
+            <div className="mb-16 animate-fade-up">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4 block">What It Does</span>
               <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                 Your sharpest tool<br />isn&apos;t in the van.
@@ -284,15 +284,17 @@ export default function Home() {
                   title: "Smart Lead Qualification",
                   desc: "Agnes asks the right questions — job type, urgency, address — so you show up to every job prepared and ready to quote.",
                 },
-              ].map(({ icon, title, desc }) => (
-                <div key={title} className="card-hover rounded-2xl border border-white/10 bg-[#111] p-7">
-                  <div className="flex items-start gap-4">
-                    <div className="shrink-0 w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
-                      {icon}
-                    </div>
-                    <div>
-                      <h3 className="text-white font-semibold">{title}</h3>
-                      <p className="mt-1 text-gray-400 text-sm leading-relaxed">{desc}</p>
+              ].map(({ icon, title, desc }, i) => (
+                <div key={title} className={`animate-fade-up${i > 0 ? ` anim-delay-${Math.min(i, 8)}` : ''}`}>
+                  <div className="card-hover rounded-2xl border border-white/10 bg-[#111] p-7 h-full">
+                    <div className="flex items-start gap-4">
+                      <div className="shrink-0 w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
+                        {icon}
+                      </div>
+                      <div>
+                        <h3 className="text-white font-semibold">{title}</h3>
+                        <p className="mt-1 text-gray-400 text-sm leading-relaxed">{desc}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -304,14 +306,14 @@ export default function Home() {
         {/* ── Pricing ── */}
         <section id="pricing" className="w-full py-20 md:py-28 border-t border-white/5">
           <div className="max-w-5xl mx-auto px-6">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 animate-fade-up">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4 block">Pricing</span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Simple. Transparent. One plan.</h2>
               <p className="mt-4 text-gray-400">No hidden fees. Cancel anytime.</p>
             </div>
             <div className="max-w-3xl mx-auto">
               {/* Pricing card */}
-              <div className="rounded-2xl border border-white/10 bg-[#111] p-10 md:p-12 text-center">
+              <div className="rounded-2xl border border-white/10 bg-[#111] p-10 md:p-12 text-center animate-fade-up anim-delay-1">
                 <div className="flex items-center justify-center gap-3 mb-6">
                   <span className="inline-block rounded-full bg-accent/10 border border-accent/20 px-4 py-1 text-xs font-semibold text-accent uppercase tracking-wide">Early Access</span>
                 </div>
@@ -363,7 +365,7 @@ export default function Home() {
         {/* ── FAQ ── */}
         <section className="w-full py-20 md:py-28 border-t border-white/5">
           <div className="max-w-3xl mx-auto px-6">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 animate-fade-up">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4 block">FAQ</span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Common Questions</h2>
             </div>
@@ -389,8 +391,8 @@ export default function Home() {
                   q: "How long does setup take?",
                   a: "Just one dial code on your carrier — we send you a simple 1-page guide and handle the rest. Agnes is personalized with your business name and trade type before you finish your next coffee.",
                 },
-              ].map(({ q, a }) => (
-                <details key={q} className="group rounded-2xl border border-white/10 bg-[#111] p-6 cursor-pointer">
+              ].map(({ q, a }, i) => (
+                <details key={q} className={`animate-fade-up${i > 0 ? ` anim-delay-${Math.min(i, 8)}` : ''} group rounded-2xl border border-white/10 bg-[#111] p-6 cursor-pointer`}>
                   <summary className="font-semibold text-white list-none flex justify-between items-center gap-4">
                     {q}
                     <svg className="w-5 h-5 text-gray-500 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -407,7 +409,7 @@ export default function Home() {
         {/* ── CTA ── */}
         <section className="w-full py-20 md:py-28">
           <div className="max-w-4xl mx-auto px-6">
-            <div className="cta-gradient rounded-3xl p-12 md:p-16 text-center">
+            <div className="cta-gradient rounded-3xl p-12 md:p-16 text-center animate-fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                 Stop losing jobs<br />to your voicemail.
               </h2>

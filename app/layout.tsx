@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ScrollAnimations from "./components/ScrollAnimations";
 
 export const metadata: Metadata = {
   title: "AGNES — Never Miss a Customer Call Again",
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#0a0a0a] text-gray-400">
+        <ScrollAnimations />
         {children}
       </body>
     </html>
