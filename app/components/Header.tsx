@@ -34,6 +34,14 @@ export default function Header() {
           </a>
         </nav>
 
+        {/* Desktop CTA */}
+        <a
+          href="mailto:info@agnesai.ca?subject=AGNES%20Early%20Access"
+          className="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-5 py-2 text-sm font-semibold text-gray-900 hover:bg-accent-400 transition-colors shrink-0"
+        >
+          Get Early Access
+        </a>
+
         {/* Mobile hamburger */}
         <button
           className="md:hidden ml-auto text-gray-400 hover:text-white p-2"

@@ -46,6 +46,20 @@ export default function Home() {
                   <span className="text-accent">✓</span> 24/7 — evenings, weekends, holidays
                 </span>
               </div>
+
+              {/* Social proof */}
+              <div className="mt-8 flex items-center gap-3">
+                <div className="flex -space-x-2">
+                  {["MR","JK","TP","AS"].map((initials) => (
+                    <div key={initials} className="w-8 h-8 rounded-full bg-accent/20 border-2 border-[#0a0a0a] flex items-center justify-center text-[10px] font-bold text-accent">
+                      {initials}
+                    </div>
+                  ))}
+                </div>
+                <div className="text-sm text-gray-400">
+                  Tradespeople across Canada <span className="text-white font-semibold">are getting early access</span>
+                </div>
+              </div>
             </div>
 
             {/* Right — Phone mockup (RingBack style) */}
@@ -363,7 +377,7 @@ export default function Home() {
         </section>
 
         {/* ── FAQ ── */}
-        <section className="w-full py-20 md:py-28 border-t border-white/5">
+        <section id="faq" className="w-full py-20 md:py-28 border-t border-white/5">
           <div className="max-w-3xl mx-auto px-6">
             <div className="text-center mb-16 animate-fade-up">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4 block">FAQ</span>
@@ -435,34 +449,51 @@ export default function Home() {
         </section>
 
         {/* ── Footer ── */}
-        <footer className="w-full text-gray-500 py-12 border-t border-white/5">
+        <footer className="w-full text-gray-500 py-14 border-t border-white/5">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+              {/* Brand col */}
+              <div className="md:col-span-2">
+                <div className="flex items-center gap-2 mb-4">
                   <Image src="/agnes-logo-1.png" alt="Agnes" width={100} height={25} className="h-7 w-auto" style={{mixBlendMode:'lighten'}} />
                 </div>
-                <p className="text-sm text-gray-500">The AI receptionist built for tradespeople. Never lose a job to a missed call again.</p>
+                <p className="text-sm text-gray-500 max-w-xs leading-relaxed">The AI receptionist built for tradespeople. Never lose a job to a missed call again.</p>
+                <p className="mt-4 text-xs text-gray-600">📍 Mississauga, Ontario · Canada</p>
+                {/* Trust badges */}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/8 bg-white/3 px-3 py-1.5 text-xs text-gray-500">
+                    <span className="text-accent">🔒</span> SSL Secured
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/8 bg-white/3 px-3 py-1.5 text-xs text-gray-500">
+                    <span className="text-accent">🇨🇦</span> Canadian Company
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/8 bg-white/3 px-3 py-1.5 text-xs text-gray-500">
+                    <span className="text-accent">✓</span> Cancel Anytime
+                  </span>
+                </div>
               </div>
+              {/* Product col */}
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Product</h4>
-                <nav className="flex flex-col gap-2 text-sm">
+                <nav className="flex flex-col gap-2.5 text-sm">
                   <Link href="/#how-it-works" className="hover:text-white transition-colors">How It Works</Link>
                   <Link href="/#pricing" className="hover:text-white transition-colors">Pricing</Link>
+                  <Link href="/#faq" className="hover:text-white transition-colors">FAQ</Link>
                 </nav>
               </div>
+              {/* Contact col */}
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Get in Touch</h4>
-                <nav className="flex flex-col gap-2 text-sm">
+                <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Company</h4>
+                <nav className="flex flex-col gap-2.5 text-sm">
                   <a href="mailto:info@agnesai.ca" className="hover:text-white transition-colors">info@agnesai.ca</a>
                   <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
                   <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
                 </nav>
               </div>
             </div>
-            <div className="mt-10 pt-6 border-t border-white/5 text-center text-xs text-gray-600">
-              &copy; {new Date().getFullYear()} AGNES Inc. &mdash; Built for the trades.
-
+            <div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-600">
+              <span>&copy; {new Date().getFullYear()} AGNES Inc. All rights reserved.</span>
+              <span className="text-gray-700">Built for the trades · Powered by AI</span>
             </div>
           </div>
         </footer>
